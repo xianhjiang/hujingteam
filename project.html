@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>胡靖团队</title>
+  <link rel="stylesheet" href="./css/base.css">
+  <script src="./js/jq.js"></script>
+  <link rel="stylesheet" href="./css/home.css">
+  <link rel="stylesheet" href="./css/mystyle.css">
+</head>
+
+<body>
+  <canvas class="canvas-wrap" id="triangle-lost-in-space" resize="true"></canvas>
+
+  <div class="music-wrap" id="musicwrap">
+    <audio id="play1" controls autoplay>
+      <source src="./img/music.mp3">
+    </audio>
+  </div>
+  <!-- loadding -->
+  <div class="lodding-wrap">
+    <div class="loadding-div"></div>
+  </div>
+
+  <!-- 遮罩层 -->
+  <div class="zhezhao" id="zhezhao">
+    <span class="close"><svg t="1649229755294" class="icon" viewBox="0 0 1024 1024" version="1.1"
+        xmlns="http://www.w3.org/2000/svg" p-id="4692" width="32" height="32">
+        <path
+          d="M512 0C229.187368 0 0 229.187368 0 512 0 794.812632 229.187368 1024 512 1024 794.812632 1024 1024 794.812632 1024 512 1024 229.187368 794.812632 0 512 0ZM512 970.105263C259.368421 970.105263 53.894737 764.631579 53.894737 512 53.894737 259.368421 259.368421 53.894737 512 53.894737 764.631579 53.894737 970.105263 259.368421 970.105263 512 970.105263 764.631579 764.631579 970.105263 512 970.105263ZM550.130526 512 719.629474 342.366316C730.273684 331.856842 730.273684 314.88 719.629474 304.370526 709.12 293.726316 692.143158 293.726316 681.633684 304.370526L512 473.869474 342.366316 304.370526C331.856842 293.726316 314.88 293.726316 304.370526 304.370526 293.726316 314.88 293.726316 331.856842 304.370526 342.366316L473.869474 512 304.370526 681.633684C293.726316 692.143158 293.726316 709.12 304.370526 719.629474 309.625263 724.884211 316.496842 727.578947 323.368421 727.578947 330.24 727.578947 337.111579 724.884211 342.366316 719.629474L512 550.130526 681.633684 719.629474C686.888421 724.884211 693.76 727.578947 700.631579 727.578947 707.503158 727.578947 714.374737 724.884211 719.629474 719.629474 730.273684 709.12 730.273684 692.143158 719.629474 681.633684L550.130526 512Z"
+          p-id="4693"></path>
+      </svg></span>
+    <div id="videoResume">
+      <video id="videoResumeC" controls="" name="media">
+        <source src="http://123.56.144.92/hualang/WhyDon'tWe.mp4" type="video/mp4">
+      </video>
+    </div>
+  </div>
+
+  <!-- 主要页面 -->
+  <div class="box">
+
+    <!-- 顶部栏 -->
+    <div class="header borderafter">
+      <!-- 返回按钮 -->
+      <a style="position: absolute;left:50px;" href="javascript:history.back()">
+        <svg t="1649246285004" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg"
+          p-id="3737" width="20" height="20">
+          <path
+            d="M98 468.9l322.8-322.8v184.4C743.6 376.7 881.9 607.3 928 837.8 812.7 676.4 651.3 602.6 420.8 602.6v189.1L98 468.9z"
+            p-id="3738" fill="#254665"></path>
+        </svg>
+      </a>
+
+
+      <div class="col">
+        <span>胡婧团队</span>
+        <!-- 右边操作栏 -->
+        <div class="header-right">
+          <!-- 按钮 -->
+          <div class="min_menu-wrap" id="minmenu">
+            <span class="min_menu"></span>
+          </div>
+          <!-- 列表 -->
+          <div class="menu_list">
+            <!-- 栏目 -->
+            <ul class="header-nav">
+              <li><a href="./index.html">主页</a></li>
+              <li><a href="./team.html">团队</a></li>
+              <li class="active"><a href="./project.html">项目</a></li>             
+              <li><a href="./contact.html">联系</a></li>
+              <!-- <li><a href="./resume.html">经验</a></li>
+              <li><a href="./blog.html">博客</a></li> -->
+            </ul>
+            <!-- 开关灯 -->
+            <span class="kaig-bottm">
+              <svg t="1649159647627" class="icon" viewBox="0 0 1024 1024" version="1.1"
+                xmlns="http://www.w3.org/2000/svg" p-id="2250" width="15" height="15">
+                <path
+                  d="M1008.535135 710.670332l-70.446388 116.386904a112.099975 112.099975 0 0 1-140.572857 43.829042l-69.422645-17.083729c-5.502624 3.1992-11.133217 6.3984-16.763809 9.341665l-18.299425 62.896276C687.335435 981.514621 639.4754 1023.744064 582.657604 1023.744064H441.764828c-56.817796 0-104.677831-42.293427-110.308423-97.703574l-18.299425-62.896276a422.166458 422.166458 0 0 1-16.827793-9.341665l-69.614597 17.083729a112.163959 112.163959 0 0 1-140.508873-43.893026L15.631361 710.542364a107.493127 107.493127 0 0 1 32.43989-144.731817L96.251206 518.910272a410.649338 410.649338 0 0 1 0-14.204448l-48.179955-46.836291a107.365159 107.365159 0 0 1-32.375906-144.731817l70.190452-116.450888a112.099975 112.099975 0 0 1 140.572857-43.893026l69.550612 17.083729c5.566608-3.1992 11.133217-6.3984 16.827794-9.341665l18.299425-62.896276C336.831061 42.229443 384.691096 0 441.508892 0H582.529636c56.817796 0 104.677831 42.293427 110.372407 97.63959l18.235441 62.704324c5.75856 3.007248 11.325169 6.142464 16.827793 9.341665l69.678581-17.083729a112.163959 112.163959 0 0 1 140.508873 43.893026l70.446388 116.514872a107.493127 107.493127 0 0 1-32.375906 144.731817l-48.179955 46.772307a414.616346 414.616346 0 0 1 0 14.204448l48.243939 46.836291c47.092227 31.928018 62.192452 94.952262 32.247938 145.115721z m-213.066733-142.23644l3.391152-31.032242a246.210447 246.210447 0 0 0 0-51.699076l-3.263184-30.904274 93.992502-91.305173-53.554612-88.553862-131.615096 32.311922-23.546113-16.059985a294.134466 294.134466 0 0 0-48.627844-26.809297l-27.513121-11.901025L568.453156 127.968008H455.649356L419.370426 252.736816l-27.705074 11.965009c-16.635841 7.166208-32.951762 16.187953-48.499875 26.745313l-23.610097 15.996001-131.487128-32.247938-53.36266 88.489878 94.056486 91.433141-3.263184 30.968258a247.874031 247.874031 0 0 0 0 51.699076l3.1992 30.904274-93.928518 91.369157 53.554612 88.489878 131.551112-32.311922 23.610097 16.059985c15.292177 10.429393 31.544114 19.451137 48.563859 26.809297l27.577106 11.965009L455.905292 895.776056h112.611848l36.342914-124.768808 27.64109-11.965009c16.699825-7.166208 32.951762-16.187953 48.563859-26.745313l23.546113-15.996001 131.423144 32.247938 53.68258-88.745814-94.184454-91.369157zM512.147232 615.846038c57.329668 0 103.846038-46.516371 103.974006-103.974006 0-57.329668-46.644339-103.974006-103.974006-103.974007S408.173225 454.542364 408.173225 511.872032 454.817564 615.846038 512.147232 615.846038z m0 127.968008c-127.968008 0-231.942014-103.910022-231.942015-231.942014 0-127.968008 103.910022-231.942014 231.942015-231.942015 127.968008 0 231.942014 103.910022 231.942014 232.133967A232.133967 232.133967 0 0 1 512.147232 743.814046z"
+                  p-id="2251"></path>
+              </svg>
+              <!-- 开关按钮 -->
+              <span class="my-radio active" id="myRadio">
+                <i></i>
+              </span>
+              <svg t="1649159678284" class="icon" viewBox="0 0 1024 1024" version="1.1"
+                xmlns="http://www.w3.org/2000/svg" p-id="3376" width="15" height="15">
+                <path
+                  d="M505.4 878.6c-196.7 0-358-150.9-374.9-343.1 1-18.6 16.1-33.4 34.9-33.4 10.8 0 20.5 4.8 26.9 12.4 0.2 0.3 0.5 0.1 0.5-0.7 41.6 44.2 100.5 71.9 166.1 71.9 127.1 0 230.1-103 230.1-230.1 0-66.1-28-125.1-72.6-166.8 0.1-0.1 0.5-0.1 0.3-0.3-7-6.5-11.4-15.7-11.4-26.1 0-19 14.9-34.1 33.7-35.3 192.1 17.1 342.9 178.3 342.9 375 0 208-168.5 376.5-376.5 376.5z"
+                  p-id="3377"></path>
+              </svg>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 顶部导航 -->
+    <div class="navigation">
+      <div class="nav-titleBox co zz">
+        <!-- 占位符 -->
+        <div class="co-left"></div>
+
+        <!-- 标题 -->
+        <div class="co-right">
+          <span class="titleBox-tag">PORTFOLIO!</span>
+          <h1>
+            Great minds have purpose
+          </h1>
+          <a class="buttom navbtn" href="#next-one">了解一下这些项目吧
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- 主要修改部分 -->
+    <div id="project" class="content zz">
+      <!-- 占位符 -->
+      <div class="co-left">
+        <!-- 简历吸盘 -->
+        <div class="me-card carbox borderbefore" id="mycard">
+          <div class="mecar-title">
+            <div class="me-image">
+              <span class="status">
+                <i id="audioTrigger">大家好啊！</i>
+              </span>
+              <img src="./img/team/hujing.jpg" alt="">
+            </div>
+            <h3>胡靖</h3>
+            <p class="me-hover">
+              <span>我们的团队 very good！！！</span>
+            </p>
+          </div>
+          
+          <div class="borderbotm"></div>
+          <div class="mecar-bottm">
+            <div>
+              <span class="mecarbottm-key">学位</span>
+              <span class="mecarbottm-value">工学博士</span>
+            </div>
+            <div>
+              <span class="mecarbottm-key">职称</span>
+              <span class="mecarbottm-value">教授</span>
+            </div>
+            <div>
+              <span class="mecarbottm-key">Email</span>
+              <span class="mecarbottm-value">lesley123@cuit.edu.cn</span>
+            </div>
+
+          </div>  
+          <div class="borderbotm"></div>
+          <div class="mecar-bottm">
+            <div>
+              <span class="mecarbottm-key">科研方向：</span>
+            </div>
+            <div>
+              <span class="mecarbottm-value">1、图像处理与模式识别</span>
+            </div>
+            <div>
+              <span class="mecarbottm-value">2、强化学习与应用</span>
+            </div>
+            <div>
+              <span class="mecarbottm-value">3、智慧气象</span>
+            </div>
+          </div>  
+          <div class="borderbotm"></div>  
+
+          <div class="buttom-box ">
+            <a class="button" href="Mailto:lesley123@cuit.edu.cn?Subject=邮箱标题&amp;Body=邮箱内容！">联系我</a>
+          </div>
+        </div>
+      </div>
+      <!-- 右边 -->
+      <div class="co-right" id="next-one">
+        <div class="content-li li1">
+          <div class="li1-box">
+            <a class="li1-box-item carbox" href="javascript:;">
+              <div class="projectItem">
+                <img src="./img/paper/project/1.png" alt="">
+                <div>
+                  <h3>Style Transfer 风格迁移</h3>
+                  <p>控制神经风格迁移（NST）中的风格化程度具有挑战，因为通常需要对超参数进行手工调整。在本文中，我们提出了第一个基于深度强化学习（RL）的风格迁移框架，将一步风格迁移拆分为NST任务的逐步过程。我们的基于RL的方法倾向于在早期步骤中保留更多内容图像的细节和结构，并在后续步骤中合成更多的风格模式。这是一种用户易于控制的风格迁移方法。此外，由于我们的基于RL的模型逐步执行风格化，因此它比现有的一步深度学习（DL）模型更轻量化，计算复杂度更低。实验结果表明了所提方法的有效性和鲁棒性。</p>
+                </div>
+              </div>
+              <div class="boxitem-title">                
+                <h6>成果：Controlling Neural Style Transfer with Deep Reinforcement Learning（CCF A类会议）</h6>
+                <span data-video-url="./video/StyleTransfer.mp4" id="videoShow">视频展示</span>
+              </div>
+            </a>           
+            <a class="li1-box-item carbox" href="javascript:;">
+              <div class="projectItem">
+                <img src="./img/paper/project/1.jpg" alt="">
+                <div>
+                  <h3>Image Super-Resolution 图像超分辨率</h3>
+                  <p>在图像超分辨率算法的相关研究中，为实现网络模型轻量化和高效性提出对称视觉注意力网络，使用大核卷积分解方法，从底层大幅降低卷积计算成本，减少参数量，实现网络轻量化；并设计瓶颈注意力模块和对称大核注意力模块，增强网络对特征的关注能力。该研究为高效超分辨率提供了新的解决思路，并且参加比赛CVPR NTIRE 2023 Challenge on Efficient SR入选官方报告。我们深耕于图像超分辨率算法的研究与应用，多次参加CVPR NTIRE超分比赛，在轻量化SR和大倍数SR方向成果颇丰。并积极推动SR在气象领域的应用，为降尺度领域做出突出贡献。</p>
+                </div>
+              </div>
+              <div class="boxitem-title">
+                
+                <h6>成果：NTIRE 2023 Challenge on Efficient Super-Resolution: Methods and Results</h6>
+                <h6>Efficient Image Super-Resolution via Symmetric Visual Attention Network（IJCNN2024 CCF-C）</h6>
+                <!-- <span>2022.10</span> -->
+              </div>
+            </a>           
+            <a class="li1-box-item carbox" href="javascript:;">
+              <div class="projectItem">
+                <img src="./img/paper/project/3.jpg" alt="">
+                <div>
+                  <h3>虚假人脸检测</h3>
+                  <p>面部操纵技术，特别是DeepFake技术，正在引发严重的社会关注和安全问题。面对现实世界中存在的数据分布偏斜等问题，现有的DeepFake检测方法表现出明显的性能下降，特别是AUC分数。我们提出了一种基于多任务学习的双层协作框架，可以同时检测帧级别和视频级别的DeepFake，并提出了一个联合损失函数，结合了AUC损失和交叉熵损失，以优化AUC性能并最小化不平衡分布的不利影响。我们提出的方法在帧级别和视频级别都优于所有现有方法，并且对视频质量和数据集变化更加稳健。</p>
+                </div>
+              </div>
+              <div class="boxitem-title">
+                
+                <h6>成果：Learning a Deep Dual-level Network for Robust DeepFake Detection</h6>
+                <!-- <h6>Efficient Image Super-Resolution via Symmetric Visual Attention Network（IJCNN2024 CCF-C）</h6> -->
+                <!-- <span>2022.10</span> -->
+              </div>
+            </a>           
+            <a class="li1-box-item carbox" href="javascript:;">
+              <div class="projectItem">
+                <img src="./img/paper/project/4.png" alt="">
+                <div>
+                  <h3>降水预测</h3>
+                  <p>降水对人类未来的发展方向具有重要意义。然而，依据复杂的大气演变过程准确预测降水是一项极具挑战性的任务。传统的数值天气预报通过数值模拟求解流体力学和热力学方程等预测大气的运动状态。但由于该方法需要大量的计算资源，加之人类对大气物理的认知存在局限性，难以满足复杂气候区域的降水预测需求。深度学习的出现为降水预测提供了新的解决方案，该领域将降水预测视为时空预测问题，利用神经网络框架建立输入和输出之间的对应关系，提升降水预测准确率的同时可显著地降低预测成本。然而，现有深度学习方法主要专注于单一降水变量的时空预测，往往忽略了多气象要素与降水时空特征的相互作用，而且普遍存在低估降水强度的问题，无法精准地捕捉降水信息。因此，我们提出了一种多气象要素预测降水的模型，在深度融合时间感知机制和空间感知机制的基础上，借助ViT框架，准确建立多气象要素与降水的复杂时空关系。此外，我们还提出自适应差分损失函数以准确捕捉降水强度信息。实验结果表明，与大多数先进的同类方法比较，该方法整体的客观指标具有显著优势，明显改善了降水预测的效果，尤其在缓解低估降水强度方面显示出巨大潜力。</p>
+                </div>
+              </div>
+              <div class="boxitem-title">
+                
+                <h6>成果：Spatio-temporal Perceiving Network Based ViT for Multi-Meteorological Factor Prediction of Total Precipitation in the Next 6 Hours</h6>
+                <!-- <h6>Efficient Image Super-Resolution via Symmetric Visual Attention Network（IJCNN2024 CCF-C）</h6> -->
+                <!-- <span>2022.10</span> -->
+              </div>
+            </a>           
+            <a class="li1-box-item carbox" href="javascript:;">
+              <div class="projectItem">
+                <img src="./img/paper/project/5.jpg" alt="">
+                <div>
+                  <h3>智慧气象降尺度</h3>
+                  <p>以精细的空间分辨率处理复杂的气象过程需要大量的计算资源。为了加速气象模拟，研究人员利用神经网络从低分辨率模拟中缩小气象变量的尺度。尽管取得了显着的进步，但当代尖端的降降尺度算法是针对特定变量量身定制的。但是，独立地处理气象变量忽略了它们之间固有的物理联系。此外，大量的数据收集、标记工作和广泛的计算资源对于解决每个新任务是必不可少的。然而，目前的模型缺乏对各种气象变量的广泛适用性，并且忽略了变量之间的关系。在本文中，我们引入了一个基于元学习的统一降尺度框架，用于从不同的数值模型和各种时空尺度中得出的降尺度变量。在ERA5和GFS的温度、风力、地表气压和总降水量等变量上训练，我们的方法可以扩展到不同时空尺度下CFS、S2S和CMIP6的对流降水、势能、高度、湿度和臭氧等变量，表明它学习了不同变量之间的相互联系。该方法是建立通用降尺度模型的首次尝试，实验结果表明，该模型在定量和定性上均优于现有的最佳降尺度方法。</p>
+                </div>
+              </div>
+              <div class="boxitem-title">
+                
+                <h6>成果：MetaSD: A Unified Framework for Scalable Downscaling of Meteorological Variables in Diverse Situations</h6>
+                <!-- <h6>Efficient Image Super-Resolution via Symmetric Visual Attention Network（IJCNN2024 CCF-C）</h6> -->
+                <!-- <span>2022.10</span> -->
+              </div>
+            </a>           
+                   
+          </div>
+        </div>
+        <div class="borderbotm"></div>
+        <!-- <div class="carbox copybottm">
+          ©2022 wttandroid
+        </div> -->
+        <div id="videoPopup" style="display: none;">
+          <video id="videoPlayer" width="100%" height="100%" controls autoplay></video>
+          <button id="closeBtn">关闭</button>
+        </div>
+      </div>
+    </div>
+</body>
+<script type="text/javascript" src="./js/paper-full.min.js"></script>
+<script type="text/javascript" src="./js/canvas.js"></script>
+<script src="./js/base.js"></script>
+<script src="./js/index1.js"></script>
+</html>

@@ -1,0 +1,220 @@
+#next-one .li4 .li2-box{
+    margin: 20px auto;
+}
+#next-one .li6 .li6-box .carbox img{
+    min-height: 200px;
+}
+#mycard{
+    font-size: 14px;
+}
+#team .li2{
+    margin-top: 100px;
+}
+#team .li2-box a{
+    /* min-height: 360px; */
+}
+.zz #mycard .me-image img{
+    width: 200px;
+    /* height: 200px; */
+    height: auto;
+}
+#contact .li2 .carbox{
+    padding: 10px;
+}
+#team .li2-box-item{
+    flex: 0 0 28%;
+    height: auto;
+}
+#team .li2-box-item img{
+    width: 100%; /* 图片宽度充满父元素 */
+    height: auto; /* 自适应高度 */
+}
+#index .li6 .li6boxitem, #index .li7 .li7boxitem{
+    padding: 10px 0;
+    min-height: 150px;
+}
+#index .li6 .li6boxitem ul , #index .li7 .li7boxitem ul{
+    text-align: center;
+    list-style-type: disc; 
+}
+#index .li6 .li6boxitem ul li, #index .li7 .li7boxitem ul li{
+    width: 100%;
+    margin-top: 10px;
+    text-align: justify;
+    margin-left: 20px;
+}
+#index .co-right .content-li .li1-box a{
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    /* color: var(--headerFont); */
+    transition: .4s ease-in-out;
+    margin: 0px;
+}
+
+#project .co-right .li1-box .li1-box-item{
+    flex: 100%;
+    
+}
+#project .co-right .li1-box-item{
+    cursor: default;
+}
+#project .co-right .projectItem{
+    display: flex;
+    height: 100%;
+    align-items: center;
+    
+}
+
+#project .co-right .projectItem img{
+    max-width: 35%; /* 图片最大宽度为容器的一半 */
+    height: auto; /* 高度自动调整 */
+}
+#project .co-right .projectItem div{
+    flex: 1;
+    max-width: 63%;
+    margin-left: 10px;
+}
+#project .co-right .projectItem div h3{
+    text-align: center;
+}
+#project .co-right .projectItem div p{
+    word-wrap: break-word;
+    text-indent: 2em;
+}
+
+#project .co-right .li1-box-item:hover .boxitem-title{
+    width: 90%;
+    margin: 0 auto;
+    transform: scale(1.1);
+}
+#project .co-right .li1-box-item .boxitem-title span{
+    cursor: pointer;
+}
+#project .co-right .li1-box-item .boxitem-title span:hover{
+    color: rgb(255,148,148);
+}
+#videoPopup {
+    width: 50%;
+    height: 50%;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(245, 245, 245, 0.8); /* 浅灰色背景，稍微偏暖 */
+    padding: 20px;
+    border-radius: 10px;
+}
+
+#videoPlayer {
+    display: block;
+    margin: 0 auto;
+}
+
+#closeBtn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    /* color: #ffffff; */
+    color: #333;
+}
+#closeBtn:hover {
+    color: #ff6347;
+}
+/* 根据需要添加图标库的 CSS，这里以 Font Awesome 为例 */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css');
+
+#audioTrigger{
+    cursor: pointer;
+}
+
+#index .co-right .li8 .researchDirection{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+#index .co-right .li8 .researchDirection a{
+    position: relative;
+    flex: 100%;
+    margin-bottom: 40px;
+    cursor: default;
+    overflow: hidden;
+}
+#index .co-right .li8 .researchDirection a .projectItem{
+    display: flex;
+    height: 100%;
+    align-items: center;
+    
+}
+#index .co-right .li8 .researchDirection a .projectItem img{
+    max-width: 35%;
+    height: auto;
+}
+#index .co-right .li8 .researchDirection a .projectItem div{
+    flex: 1;
+    max-width: 63%;
+    margin-left: 10px;
+}
+#index .co-right .li8 .researchDirection a .projectItem div h3{
+    text-align: center;
+}
+#index .co-right .li8 .researchDirection a .projectItem div p{
+    word-wrap: break-word;
+    text-indent: 2em;
+}
+#index .co-right .li8 .researchDirection a .boxitem-title{
+    position: absolute;
+    min-height: 100px;
+    bottom: -90px;
+    left: 0px;
+    right: 0px;
+    text-align: center;
+    background-color: var(--headerhover);
+    color: var(--headerFont);
+    transition: all .3s ease-in-out;
+    transform: scale(1);
+    font-size: 12px;
+}
+#index .co-right .li8 .researchDirection a .boxitem-title h6{
+    width: 100%;
+    font-size: 12px;
+    display: inline-block;
+    margin: 15px 0 8px;
+}
+#index .co-right .li8 .researchDirection a:hover .boxitem-title{
+    width: 90%;
+    margin: 0 auto;
+    transform: scale(1.1);
+    bottom: 0px;
+    opacity: 1;
+}
+#index .co-right .li8 .researchDirection a .boxitem-title span:hover {
+    color: rgb(255,148,148);
+}
+#index .co-right .li8 .researchDirection a .boxitem-title span {
+    cursor: pointer;
+}
+#index .co-right .li9 .li9boxitem{
+    padding: 10px;
+    /* min-height: 150px; */
+}
+#index .co-right .li9 .li9boxitem ul{
+    text-align: left;
+}
+#index .co-right .li9 .li9boxitem ul li{
+    width: 100%;
+    margin-top: 10px;
+    font-weight: bold;
+}
+#index .co-right .li9 .li9boxitem ul li span{
+    
+    font-style: italic;
+}
+#index .co-right .li9 .li9boxitem ul li img{
+    width: 20px;
+    height: 20px;
+    vertical-align: text-bottom;
+}
