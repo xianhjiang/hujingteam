@@ -29,6 +29,9 @@
     width: 100%; /* 图片宽度充满父元素 */
     height: auto; /* 自适应高度 */
 }
+#index .li2 .carbox p{
+    font-style: normal;
+}
 #index .li6 .li6boxitem, #index .li7 .li7boxitem{
     padding: 10px 0;
     min-height: 150px;
@@ -217,4 +220,7 @@
     width: 20px;
     height: 20px;
     vertical-align: text-bottom;
+}
+#contact .li2 .li2-box p{
+    margin-left: 10px;
 }
