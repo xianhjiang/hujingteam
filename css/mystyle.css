@@ -224,3 +224,15 @@
 #contact .li2 .li2-box p{
     margin-left: 10px;
 }
+/* 当屏幕宽度小于 600px 时 */
+@media only screen and (max-width: 600px) {
+    #team .li2-box-item{
+        flex: 0 0 100%;
+    }
+}
+/* 当屏幕宽度在 1200px 到 601px 之间时 */
+@media only screen and (min-width: 601px) and (max-width: 1200px) {
+    #team .li2-box-item{
+        flex: 0 0 45%;
+    }
+}
