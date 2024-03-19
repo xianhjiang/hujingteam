@@ -186,7 +186,7 @@ $('#minmenu').click(function () {
             clearInterval(intervalTimer)
         }
     }, 100);
-}, 1000);
+}, 500);
 timer();
 document.onreadystatechange = function () {
     if (document.readyState == 'complete') {
