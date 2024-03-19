@@ -174,36 +174,51 @@ $('#minmenu').click(function () {
      
   //   }
   // }
-  let timer = setTimeout(() => {
-    let opacity = $('.lodding-wrap').css('opacity');
-    let intervalTimer = null;
-    intervalTimer = opacity && setInterval(() => {
-        opacity -= 0.1
-        $('.lodding-wrap').css('opacity', opacity);
-        console.log(opacity)
-        if (opacity <= 0) {
-            $('.lodding-wrap').css('display', 'none');
-            clearInterval(intervalTimer)
-        }
-    }, 100);
-}, 500);
-timer();
-document.onreadystatechange = function () {
-    if (document.readyState == 'complete') {
-        clearTimeout(timer); // 如果页面在五秒内加载完成，取消定时器，立即隐藏加载界面
-        let opacity = $('.lodding-wrap').css('opacity');
-        let intervalTimer = null;
-        intervalTimer = opacity && setInterval(() => {
-            opacity -= 0.1
-            $('.lodding-wrap').css('opacity', opacity);
-            console.log(opacity)
-            if (opacity <= 0) {
-                $('.lodding-wrap').css('display', 'none');
-                clearInterval(intervalTimer)
-            }
-        }, 100);
-    }
-}
+//   let timer = setTimeout(() => {
+//     let opacity = $('.lodding-wrap').css('opacity');
+//     let intervalTimer = null;
+//     intervalTimer = opacity && setInterval(() => {
+//         opacity -= 0.1
+//         $('.lodding-wrap').css('opacity', opacity);
+//         console.log(opacity)
+//         if (opacity <= 0) {
+//             $('.lodding-wrap').css('display', 'none');
+//             clearInterval(intervalTimer)
+//         }
+//     }, 100);
+// }, 500);
+// timer();
+// document.onreadystatechange = function () {
+//     if (document.readyState == 'complete') {
+//         clearTimeout(timer); // 如果页面在五秒内加载完成，取消定时器，立即隐藏加载界面
+//         let opacity = $('.lodding-wrap').css('opacity');
+//         let intervalTimer = null;
+//         intervalTimer = opacity && setInterval(() => {
+//             opacity -= 0.1
+//             $('.lodding-wrap').css('opacity', opacity);
+//             console.log(opacity)
+//             if (opacity <= 0) {
+//                 $('.lodding-wrap').css('display', 'none');
+//                 clearInterval(intervalTimer)
+//             }
+//         }, 100);
+//     }
+// }
+
+document.addEventListener("DOMContentLoaded", function() {
+  let opacity = $('.lodding-wrap').css('opacity');
+  let intervalTimer = null;
+  intervalTimer = opacity && setInterval(() => {
+      opacity -= 0.1
+      $('.lodding-wrap').css('opacity', opacity);
+      console.log(opacity)
+      if (opacity <= 0) {
+          $('.lodding-wrap').css('display', 'none');
+          clearInterval(intervalTimer)
+      }
+  }, 100);
+});
+
 
 
   
