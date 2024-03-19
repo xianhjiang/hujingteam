@@ -232,6 +232,9 @@
     #contact .li1 .li1-box-item{
         margin-top: 20px;
     }
+    .li2-box-item:hover .boxitem-title{
+        transform: scale(1.1);
+    }
 }
 /* 当屏幕宽度在 1200px 到 601px 之间时 */
 @media only screen and (min-width: 601px) and (max-width: 1200px) {
