@@ -41,9 +41,9 @@
     list-style-type: disc; 
 }
 #index .li6 .li6boxitem ul li, #index .li7 .li7boxitem ul li{
-    width: 100%;
+    display: block;
     margin-top: 10px;
-    text-align: justify;
+    text-align: left;
     margin-left: 20px;
 }
 #index .co-right .content-li .li1-box a{
@@ -228,6 +228,9 @@
 @media only screen and (max-width: 600px) {
     #team .li2-box-item{
         flex: 0 0 100%;
+    }
+    #contact .li1 .li1-box-item{
+        margin-top: 20px;
     }
 }
 /* 当屏幕宽度在 1200px 到 601px 之间时 */

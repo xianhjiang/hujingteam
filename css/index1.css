@@ -19,6 +19,7 @@
 
 .content-li.li1>.li1-box {
   position: relative;
+  margin-top: 20px;
   flex: 0 0 32%;
   background-color: var(--headerCOlor);
   min-height: 200px;
