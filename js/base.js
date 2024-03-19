@@ -158,22 +158,53 @@ $('#minmenu').click(function () {
   
   
   // loadding
-  document.onreadystatechange = function () {
-    if (document.readyState == 'complete') {
-      let opacity = $('.lodding-wrap').css('opacity');
-      let timer = null;
-      timer = opacity&&setInterval(() => {
-        opacity-=0.1
+  // document.onreadystatechange = function () {
+  //   if (document.readyState == 'complete') {
+  //     let opacity = $('.lodding-wrap').css('opacity');
+  //     let timer = null;
+  //     timer = opacity&&setInterval(() => {
+  //       opacity-=0.1
+  //       $('.lodding-wrap').css('opacity', opacity);
+  //       console.log(opacity)
+  //       if (opacity <= 0) {
+  //         $('.lodding-wrap').css('display','none');
+  //         clearInterval(timer)
+  //       }
+  //     }, 100);
+     
+  //   }
+  // }
+  let timer = setTimeout(() => {
+    let opacity = $('.lodding-wrap').css('opacity');
+    let intervalTimer = null;
+    intervalTimer = opacity && setInterval(() => {
+        opacity -= 0.1
         $('.lodding-wrap').css('opacity', opacity);
         console.log(opacity)
         if (opacity <= 0) {
-          $('.lodding-wrap').css('display','none');
-          clearInterval(timer)
+            $('.lodding-wrap').css('display', 'none');
+            clearInterval(intervalTimer)
         }
-      }, 100);
-     
+    }, 100);
+}, 5000);
+
+document.onreadystatechange = function () {
+    if (document.readyState == 'complete') {
+        clearTimeout(timer); // 如果页面在五秒内加载完成，取消定时器，立即隐藏加载界面
+        let opacity = $('.lodding-wrap').css('opacity');
+        let intervalTimer = null;
+        intervalTimer = opacity && setInterval(() => {
+            opacity -= 0.1
+            $('.lodding-wrap').css('opacity', opacity);
+            console.log(opacity)
+            if (opacity <= 0) {
+                $('.lodding-wrap').css('display', 'none');
+                clearInterval(intervalTimer)
+            }
+        }, 100);
     }
-  }
+}
+
 
   
 
