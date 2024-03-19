@@ -187,7 +187,7 @@ $('#minmenu').click(function () {
         }
     }, 100);
 }, 5000);
-
+timer();
 document.onreadystatechange = function () {
     if (document.readyState == 'complete') {
         clearTimeout(timer); // 如果页面在五秒内加载完成，取消定时器，立即隐藏加载界面
