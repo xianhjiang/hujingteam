@@ -368,7 +368,7 @@ img {
   margin: 0 auto;
   display: block;
   font: 14px ;
-  border-right: .08em solid;
+  /* border-right: .08em solid; */
   /* 个数*2ch */
   width: 28ch; 
   white-space: nowrap;
